@@ -1,0 +1,141 @@
+#back {
+    background-image: url(img/back_light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#brand {
+    color: ghostwhite;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    font-size: 30px;
+}
+
+#navigator a {
+    color: ghostwhite;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#navigator {
+    float: right;
+    position: relative;
+    top: 40px;
+    right: 60px;
+}
+
+#navigator a:hover {
+    font-size: 30px;
+    transition: font-size 0.5s;
+}
+
+#head {
+    position: relative;
+}
+#title {
+    position:relative;
+    top: 80px;
+    font-size: 2.5em;
+    width: 600px;
+    left: 400px;
+    color: #f4f5f5;
+    font-family:cursive;
+    margin: 0px;
+    border-style: double;
+    text-align: center
+}
+
+#container {
+    width: 1100px;
+    height: 440px;
+    position: relative;
+    top: 100px;
+    margin: 0px auto;
+    background-color: white;
+    box-shadow: 4px -1px 10px 10px #4f6c81 ; 
+}
+
+#sidebar1 {
+    border-style: solid;
+    width: 340px;
+    height: 380px;
+    position: absolute;
+    margin: 30px 0px 0px 50px;
+    overflow: auto;
+    border-width: thin;
+    border-color: grey;
+}
+
+img {
+    border-radius: 50%;
+    height: 40px;
+    
+}
+
+#buttonbox {
+    width:150px;
+    height: auto;
+    position: absolute;
+    top: 140px;
+    left: 470px;
+}
+
+button {
+     margin: 10px;
+     padding: 10px auto;
+}
+
+#sidebar2 {
+    position: absolute;
+    border-style:  solid;
+    width: 340px;
+    height: 380px;
+    float: right;
+    margin: 22px 50px 29px 700px;   
+    overflow: auto;
+    border-width: thin;
+    border-color: grey;
+    top: 0px;
+    padding: 10px;
+}
+
+.profile, .profile2 {
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+.profile:hover, .profile2:hover {
+    background-color: #2F75E9;
+    color: white;
+}
+
+.profile2 {
+    display: none;
+}
+
+span {
+    position: absolute;
+    margin: 10px;
+    
+}
+
+#assign, #revoke {
+    display: none;
+    z-index: 2;
+    width: 100px
+}
+
+
+
+
+
+#switch {
+    float: right;
+    position: absolute;
+}
+
+#switch2 {
+    display: none;
+}

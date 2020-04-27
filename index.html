@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <title>Total Cloud</title>
+    </head>
+    
+    <body id="back">
+        
+        <div id="head">
+            <h2 id="brand">Total Cloud</h2>
+            <nav id="navigator">
+                <a href="#">Home |</a>
+                <a href="#">About |</a>
+                <a href="#">Features |</a>
+                <a href="#">Contact</a>
+            </nav>
+            <h2 id="title">Resource allocation application</h2>
+        </div>
+        <div id="container">
+            
+            <div id="sidebar1">
+                <div id="chandler" class="profile" onclick="swap_assign('chandler')"><img src="img/profile_picture/Chandler.jpg"><span>Chandler Bing</span></div>
+    
+                <div id="emma" class="profile" onclick="swap_assign('emma')"><img src="img/profile_picture/emma.jpg" ><span>Emma Geller</span></div>
+                
+                <div id="gunther" class="profile" onclick="swap_assign('gunther')"><img src="img/profile_picture/Gunther.jpg"> <span>Gunther Central Perk</span></div>
+                
+                <div id="janice" class="profile" onclick="swap_assign('janice')"><img src="img/profile_picture/janice.jpg" ><span>Janice Mathews</span></div>
+                
+                <div id="joey" class="profile" onclick="swap_assign('joey')"><img src="img/profile_picture/Joey.jpeg" >  <span>Joey Tribianni</span></div>
+                
+                <div id="judy" class="profile" onclick="swap_assign('judy')"><img src="img/profile_picture/Judy.jpg" >
+                <span>Judy Geller</span></div>
+                
+                <div id="mike" class="profile" onclick="swap_assign('mike')"><img src="img/profile_picture/Mike.jpg" >   <span>Mike Rudd</span></div>
+                
+                <div id="monica" class="profile" onclick="swap_assign('monica')"><img src="img/profile_picture/Monica.jpg"> <span>Monica Bing</span></div>
+                
+                <div id="rachel" class="profile" onclick="swap_assign('rachel')"><img src="img/profile_picture/Rachel.jpg" ><span>Rachel Green</span></div>
+                
+                <div id="ross" class="profile" onclick="swap_assign('ross')"><img src="img/profile_picture/Ross.jpg" >  <span>Ross Geller</span></div>
+            </div>
+            <div id="buttonbox">
+                <button id="assign">Assign</button>
+                <br>
+                <button id="revoke">Revoke</button>
+                <button id="switch" onclick="change()">Dark Mode</button>
+                <button id="switch2" onclick="change2()">Light Mode</button>
+            </div>
+            <div id="sidebar2">
+                <div id="chandler_2" class="profile2" onclick="swap_revoke('chandler_2')"><img src="img/profile_picture/Chandler.jpg"><span>Chandler Bing</span></div>
+                
+                <div id="emma_2" class="profile2" onclick="swap_revoke('emma_2')"><img src="img/profile_picture/emma.jpg" ><span>Emma Geller</span></div>
+                
+                <div id="gunther_2" class="profile2" onclick="swap_revoke('gunther_2')"><img src="img/profile_picture/Gunther.jpg"> <span>Gunther Central Perk</span></div>
+                
+                <div id="janice_2" class="profile2" onclick="swap_revoke('janice_2')"><img src="img/profile_picture/janice.jpg" ><span>Janice Mathews</span></div>
+                
+                <div id="joey_2" class="profile2" onclick="swap_revoke('joey_2')"><img src="img/profile_picture/Joey.jpeg" >  <span>Joey Tribianni</span></div>
+                
+                <div id="judy_2" class="profile2" onclick="swap_revoke('judy_2')"><img src="img/profile_picture/Judy.jpg" >
+                <span>Judy Geller</span></div>
+                
+                <div id="mike_2" class="profile2" onclick="swap_revoke('mike_2')"><img src="img/profile_picture/Mike.jpg" >   <span>Mike Rudd</span></div>
+                
+                <div id="monica_2" class="profile2" onclick="swap_revoke('monica_2')"><img src="img/profile_picture/Monica.jpg"> <span>Monica Bing</span></div>
+                
+                <div id="rachel_2" class="profile2" onclick="swap_revoke('rachel_2')"><img src="img/profile_picture/Rachel.jpg" ><span>Rachel Green</span></div>
+                
+                <div id="ross_2" class="profile2" onclick="swap_revoke('ross_2')"><img src="img/profile_picture/Ross.jpg" >  <span>Ross Geller</span></div>
+            </div>
+        </div>
+        <script>
+            //jquery
+            $ (function (){
+                $("#assign").button({
+                    icons:{
+                        secondary:"ui-icon-arrowthick-1-e"
+                    }
+                });
+                $("#revoke").button({
+                    icons:{
+                        primary:"ui-icon-arrowthick-1-w"
+                    }
+                });
+                $("#switch").button();
+                $("#switch2").button();
+            });
+            
+            //javascript
+            
+            function swap_assign (ID){
+                document.getElementById("assign").style.display = "block";
+                document.getElementById("sidebar2").style.bottom = "60px"
+                
+                
+                document.getElementById("assign").onclick = function(){
+                    document.getElementById(ID+"_2").style.display = "block"
+                    
+                    document.getElementById(ID).style.display = "none";
+                    document.getElementById("assign").style.display = "none";
+                    
+                   
+                };
+                
+            }
+            
+            function swap_revoke (ID){
+                
+               var str = ID;
+               var arr = str.split("_");
+               var id = arr[0].toString();
+            document.getElementById("revoke").style.display = "block";
+                document.getElementById("sidebar2").style.bottom = "60px"
+                
+                
+                document.getElementById("revoke").onclick = function(){
+                    
+                    document.getElementById(id).style.display = "block";
+                    document.getElementById(ID).style.display = "none";
+                     document.getElementById("revoke").style.display = "none";
+                    
+                   
+                };
+                
+            }
+            
+            function change2 (){
+                document.getElementById("container").style.backgroundColor = "white";
+                    document.getElementById("switch").style.display = "block";
+                document.getElementById("switch2").style.display = "none";
+                
+                 document.getElementById("back").style.backgroundImage = "url(img/back_light.jpg)";
+                 document.getElementById("container").style.color = "";
+                
+            }
+            
+            function change (){
+                document.getElementById("container").style.backgroundColor = "#b2adad";
+                    document.getElementById("switch2").style.display = "block";
+                    document.getElementById("switch").style.display = "none";
+                document.getElementById("back").style.backgroundImage = "url(img/dark.jpg)";
+                
+                document.getElementById("container").style.color = "white";
+            
+            }
+        </script>
+    </body>
+</html>
